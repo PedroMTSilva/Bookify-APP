@@ -5,53 +5,67 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5DC"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/iniciomeio"
-        android:layout_width="339dp"
-        android:layout_height="205dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
 
         <EditText
-            android:id="@+id/mail"
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/person_fill0_wght400_grad0_opsz24"
+            android:drawablePadding="8dp"
+            android:drawableTint="#000000"
             android:ems="10"
-            android:hint="Email"
+            android:fontFamily="@font/inika"
+            android:hint="Nome de utilizador:"
             android:inputType="textEmailAddress"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-        <EditText
-            android:id="@+id/passe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:ems="10"
-            android:hint="Palavra-Passe"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mail" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="104dp"
-            android:layout_height="28dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inika"
             android:text="Inicie Sessão:"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.119"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/key_fill0_wght400_grad0_opsz24"
+            android:drawablePadding="8dp"
+            android:ems="10"
+            android:fontFamily="@font/inika"
+            android:hint="Palavra-Passe"
+            android:inputType="textPassword"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/username" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -69,17 +83,27 @@
             android:layout_width="214dp"
             android:layout_height="57dp"
             android:layout_marginTop="28dp"
+            android:backgroundTint="#8AB369"
+            android:fontFamily="@font/inika_bold"
+            android:letterSpacing="0.08"
             android:text="Entrar"
+            android:textSize="20sp"
+            app:cornerRadius="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/criar"
+            android:id="@+id/irPaginaRegisto"
             android:layout_width="214dp"
             android:layout_height="57dp"
             android:layout_marginBottom="32dp"
+            android:backgroundTint="#8AB369"
+            android:fontFamily="@font/inika_bold"
+            android:letterSpacing="0.08"
             android:text="Criar Conta"
+            android:textSize="20sp"
+            app:cornerRadius="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -89,7 +113,7 @@
         android:id="@+id/criarcima"
         android:layout_width="342dp"
         android:layout_height="177dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +123,7 @@
             android:id="@+id/logo"
             android:layout_width="207dp"
             android:layout_height="84dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,6 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
+            android:fontFamily="@font/inika"
             android:text="Bem vindo ao"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
