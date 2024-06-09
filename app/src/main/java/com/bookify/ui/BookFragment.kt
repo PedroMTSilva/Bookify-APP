@@ -1,11 +1,13 @@
 package com.bookify.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bookify.R
+import com.bookify.data.Book
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -56,5 +58,12 @@ class BookFragment : Fragment() {
                     putString(ARG_PARAM2, param2)
                 }
             }
+    }
+    
+    private fun adapterOnClick(book: Book) {
+        Log.d("APP", "Book clicked: ${book.id}")
+//        val intent = Intent(this, BookFragment) // Vai para a página do livro selecionado
+//        intent.putExtra(BOOK_ID, book.id)
+//        startActivity(intent)
     }
 }

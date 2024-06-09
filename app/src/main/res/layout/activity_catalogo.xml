@@ -11,8 +11,7 @@
     <FrameLayout
         android:id="@+id/navhost"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:defaultBavHost="true"/>
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/nav"
@@ -24,12 +23,13 @@
         app:fabCradleVerticalOffset="10dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/catalogNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            app:menu="@menu/menu"
             android:layout_gravity="bottom"
-            android:background="@drawable/tranparent" />
+            android:layout_marginRight="16dp"
+            android:background="@drawable/tranparent"
+            app:menu="@menu/menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 

@@ -43,6 +43,7 @@
             android:letterSpacing="0.08"
             android:text="Já tenho conta"
             android:textSize="20sp"
+            android:onClick="voltarPaginaLogin"
             app:cornerRadius="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

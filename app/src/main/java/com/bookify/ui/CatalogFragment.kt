@@ -1,11 +1,15 @@
 package com.bookify.ui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.bookify.R
+import com.bookify.data.Book
+import com.bookify.ui.catalogo.BookAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +39,23 @@ class CatalogFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        val booksAdapter = BookAdapter { book -> adapterOnClick(book) }
+
+        val recyclerView: RecyclerView = view?.findViewById(R.id.recycler_view) ?: RecyclerView(requireContext())
+        recyclerView.adapter = booksAdapter
+
+        booksAdapter.submitList(
+            listOf(
+                Book(1, "a", "a"),
+                Book(2, "b", "b"),
+                Book(3, "c", "c"),
+            )
+        )
         return inflater.inflate(R.layout.fragment_catalog, container, false)
+    }
+
+    private fun adapterOnClick(book: Book) {
+        Log.d("APP_BOOK", book.toString())
     }
 
     companion object {
@@ -57,4 +77,6 @@ class CatalogFragment : Fragment() {
                 }
             }
     }
+
+    //
 }
